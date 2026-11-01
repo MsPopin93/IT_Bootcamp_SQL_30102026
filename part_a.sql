@@ -272,13 +272,14 @@ ut.trener,
 sum(broj_bodova_final) as ukupan_broj_bodova
 from utakmice_sa_trenerima ut
 where 1=1
-and ut.broj_bodova_final = 3
+--and ut.broj_bodova_final = 3
 and ut.broj_bodova_na_poluvremenu = 0
-
+-- sve utakmice u kojima je gubio na poluvremenu bez obzira na konačan rezultat
 group by 
 ut.trener
 order by ukupan_broj_bodova desc
 limit 1;
 
 --najvise podova je osvojio trener Hans Flick i to čak 39
+--U tom slučaju najviše poena je osvojio Thomas Frank i to 42
 
